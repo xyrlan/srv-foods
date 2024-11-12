@@ -1,12 +1,12 @@
 "use client";
 import React from 'react'
-import { motion } from "framer-motion";	
+import { motion } from "framer-motion";
 
 const CustomersSection = () => {
   return (
-    <div 
-    id='CustomersSection'
-    className=' w-full py-20 md:py-32'>
+    <div
+      id='CustomersSection'
+      className=' w-full py-20 md:py-32'>
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 20 }}
@@ -19,6 +19,9 @@ const CustomersSection = () => {
         </h2>
 
       </motion.div>
+      <div className='flex justify-start md:gap-x-8 max-md:gap-x-2 flex-wrap p-3  '>
+
+      </div>
     </div>
   )
 }

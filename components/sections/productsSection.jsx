@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import ProductsCarousel from '../productsCarousel';
 
-const ProductsSection = () => {
+const ProductsSection = ( { products } ) => {
   return (
     <div 
     id='ProductsSection'
@@ -40,7 +40,7 @@ const ProductsSection = () => {
         <Image src="/franu.png" alt="Franui" width={500} height={500} className='object-contain ' />
       </div> */}
 
-      <ProductsCarousel />
+      <ProductsCarousel products={products} />
 
     </div>
   )

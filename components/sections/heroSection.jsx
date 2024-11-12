@@ -1,9 +1,9 @@
 "use client"
-import React, { useRef } from 'react'
+import React from 'react'
 import { GlobeDemo } from '../globeComponent'
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from '@nextui-org/react';
-import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons';
+import { ArrowRightIcon } from '@radix-ui/react-icons';
 import LinksComponent from '../LinksComponent';
 import Image from 'next/image';
 import Link from 'next/link';

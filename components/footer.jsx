@@ -31,7 +31,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="lg:flex lg:items-end lg:justify-between">
+        <div className="lg:flex lg:items-end lg:justify-between gap-10">
           <div>
             <div className="flex justify-center lg:justify-start ">
               <Link href="/" className="flex items-center justify-center gap-4">
@@ -94,10 +94,10 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <div className="text-center sm:text-left">
-          <p className="text-lg font-medium dark:text-white ">Entre em contato</p>
+          <div className="text-center sm:text-left flex flex-col max-md:items-center ">
+          <p className="text-lg font-medium dark:text-white brightness-125 ">Entre em contato</p>
 
-          <ul className="mt-8 space-y-4 text-sm">
+          <ul className="mt-8 space-y-4 text-sm max-w-xs">
             <li>
               <a
                 className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end group dark:text-white hover:text-white/75"
@@ -118,7 +118,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <span className="flex-1 ">john@doe.com</span>
+                <span className="flex-1 ">contato@comprecomhisa.com.br</span>
               </a>
             </li>
 
@@ -142,7 +142,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <span className="flex-1 ">0123456789</span>
+                <span className="flex-1 ">(67) 9 9918 0927</span>
               </a>
             </li>
 
@@ -169,8 +169,9 @@ const Footer = () => {
                 />
               </svg>
 
-              <address className="-mt-0.5 flex-1 not-italic ">
-                213 Lane, London, United Kingdom
+              <address className="-mt-0.5 flex-1 not-italic max-w-xs">
+              R. Marquês de Leão, 295 - Parque dos Novos Estados
+              Campo Grande - MS, 79034-520
               </address>
             </li>
           </ul>

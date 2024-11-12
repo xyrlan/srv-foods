@@ -1,13 +1,37 @@
 import { client } from "./client";
 
-export const fetchAllDocuments = async () => {
+export const fetchProducts = async () => {
   const query = `
-  *[_type != 'sanity.imageAsset'] {
+  *[_type == 'produto'] {
     _type,
     ...
   }
   `;
-  const documents = await client.fetch(query);
+  const products = await client.fetch(query);
 
-  return documents;
+  return products;
+};
+
+export const fetchClients = async () => {
+  const query = `
+  *[_type == 'cliente'] {
+    _type,
+    ...
+  }
+  `;
+  const clients = await client.fetch(query);
+
+  return clients;
+};
+
+export const fetchCatalogo = async () => {
+  const query = `
+  *[_type == 'catalogoProdutos'] {
+    _type,
+    ...
+  }
+  `;
+  const catalogo = await client.fetch(query);
+
+  return catalogo;
 };

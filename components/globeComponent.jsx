@@ -11,7 +11,7 @@ const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World)
 export function GlobeDemo() {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: "#b51748",
     showAtmosphere: true,
     atmosphereColor: "#ffffff",
     atmosphereAltitude: 0.1,
@@ -398,8 +398,8 @@ export function GlobeDemo() {
   return (
     (
       <div
-        className="max-w-7xl mx-auto w-full relative overflow-hidden h-[15rem] md:h-[40rem] px-4">
-        <Image src="/hisalogo.png" alt="About" width={1000} height={1000} className='object-contain absolute top-10 right-1/2 translate-x-1/2 h-20 md:hidden z-20' />
+        className="max-w-7xl mx-auto w-full relative overflow-hidden h-[15rem] md:h-[40rem] px-4 ">
+        <Image src="/hisalogo.png" alt="About" width={1000} height={1000} className='object-contain absolute -bottom-0 right-1/2 translate-x-1/2 h-20 md:hidden z-50' />
         
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-stone-900 to-white z-40" />
 

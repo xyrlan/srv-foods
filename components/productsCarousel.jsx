@@ -4,48 +4,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeftIcon, ArrowRightIcon, ChatBubbleIcon } from '@radix-ui/react-icons';
 import { Button } from '@nextui-org/react';
 import Image from 'next/image';
+import { urlFor } from '@/sanity/lib/image';
 
-export default function ProductsCarousel() {
-  const tabs = [
-    {
-      title: 'Franuí',
-      description: 'Framboesas frescas banhadas em dois chocolates Receita da Patagônia ✨Sem glúten, produto que esta super em alta no Brasil.',
-      picture: '/franu.png',
-      color: '#f06c7c',
-    },
-    {
-      title: 'Toblerone',
-      description: 'Toblerone e muito bom',
-      picture: '/toblepng.png',
-      color: '#fcac0a',
-    },
-    {
-      title: 'Milka',
-      description: 'Milka e muito bom',
-      picture: '/milkapng.png',
-      color: '#704ca4',
-    },
-    {
-      title: 'Milka',
-      description: 'Milka e muito bom',
-      picture: '/milkapng.png',
-      color: '#704ca4',
-    },
-    {
-      title: 'Milka',
-      description: 'Milka e muito bom',
-      picture: '/milkapng.png',
-      color: '#704ca4',
-    },
-  ];
+export default function ProductsCarousel({ products }) {
+  
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleNext = () => {
-    setSelectedIndex((prevIndex) => (prevIndex + 1) % tabs.length);
+    setSelectedIndex((prevIndex) => (prevIndex + 1) % products.length);
   };
 
   const handlePrev = () => {
-    setSelectedIndex((prevIndex) => (prevIndex - 1 + tabs.length) % tabs.length);
+    setSelectedIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
   };
 
   const swipeConfidenceThreshold = 10000;
@@ -53,19 +23,19 @@ export default function ProductsCarousel() {
     return Math.abs(offset) * velocity;
   };
 
-  const selectedTab = tabs[selectedIndex];
+  const selectedTab = products[selectedIndex];
 
   return (
     <div className='md:container mx-auto z-10 mt-10'>
       <nav className="rounded-t z-10 dark:bg-stone-900 bg-white px-4">
         <ul className="flex w-full overflow-scroll scrollbar-hide">
-          {tabs.map((item, index) => (
+          {products.map((item, index) => (
             <li
-              key={item.title}
+              key={item.nome}
               className={`flex-1 flex select-none justify-center items-center gap-4 p-2.5 relative cursor-pointer font-semibold text-lg border ${index === selectedIndex ? 'text-rosa ' : 'text-default-500 hover:text-default-700'}`}
               onClick={() => setSelectedIndex(index)}
             >
-              <p className=''>{item.title}</p>
+              <p className=''>{item.nome}</p>
               {index === selectedIndex ? (
                 <motion.div className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-rosa" layoutId="underline" />
               ) : null}
@@ -98,8 +68,8 @@ export default function ProductsCarousel() {
           >
            
             <div className='flex flex-col items-center justify-center gap-6 '>
-              <h3 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white tracking-wider max-md:mt-4">{selectedTab.title}</h3>
-              <p className='w-full max-w-xl text-center md:text-lg font-medium self-center md:mt-4 md:px-4 text-default-700'>{selectedTab.description}</p>
+              <h3 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white tracking-wider max-md:mt-4">{selectedTab.nome}</h3>
+              <p className='w-full max-w-xl text-center md:text-lg font-medium self-center md:mt-4 md:px-4 text-default-700'>{selectedTab.descricao}</p>
               <div className='flex justify-center my-5'>
                 <Button  color='primary' variant='shadow' size='lg'>
                   <ChatBubbleIcon className='w-5 h-5' />
@@ -110,7 +80,7 @@ export default function ProductsCarousel() {
             <div className='relative'>
               <div className=' rounded-[50%] shadow-sm
                shadow-rosa absolute -bottom-0 left-1/2 -translate-x-1/2 max-lg:w-[300px] max-md:w-[250px] w-[374px] h-[150px] max-sm:w-[200px] max-md:bottom-5 max-sm:h-[100px]' />
-              <Image src={selectedTab.picture} alt={selectedTab.title} width={500} height={500} className='object-contain select-none h-[20rem] overflow-hidden' />
+              <Image src={urlFor(selectedTab.foto).url()} alt={selectedTab.nome} width={500} height={500} className='object-contain select-none h-[20rem] overflow-hidden' />
             </div>
           </motion.div>
         </AnimatePresence>
