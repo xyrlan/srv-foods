@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { ThemeSwitch } from "@/components/themeSwitch";
 import Navbar from "@/components/navBar";
+import Footer from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "SRV",
+  title: "Hisa Distribuidora",
   description: "Sua conexão global para importação, exportação e distribuição de diversos produtos. Com a SRV, você tem acesso a qualidade, confiabilidade e excelência em serviços logísticos.",
 };
 
@@ -26,11 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative dark:bg-stone-900 bg-white`}
       >
-        <Providers>
-          <Navbar />
-          {/* <ThemeSwitch /> */}
           {children}
-        </Providers>
       </body>
     </html>
   );

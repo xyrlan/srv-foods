@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -397,11 +398,12 @@ export function GlobeDemo() {
   return (
     (
       <div
-        className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+        className="max-w-7xl mx-auto w-full relative overflow-hidden h-[15rem] md:h-[40rem] px-4">
+        <Image src="/hisalogo.png" alt="About" width={1000} height={1000} className='object-contain absolute top-10 right-1/2 translate-x-1/2 h-20 md:hidden z-20' />
         
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-stone-900 to-white z-40" />
 
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+        <div className="absolute w-full left-0 md:-bottom-20 h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

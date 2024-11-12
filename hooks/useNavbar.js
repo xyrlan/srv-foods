@@ -11,10 +11,13 @@ export default function useNavbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      if(isSM)
-        setVisible(currentScrollPos < 10 || false)
-      else
-        setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      // if (isSM)
+      //   setVisible(currentScrollPos < 10 || false)
+      // else
+      //   setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      // setPrevScrollPos(currentScrollPos);
+      // setIsNavbarAtTop(currentScrollPos === 0);
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
       setIsNavbarAtTop(currentScrollPos === 0);
     };

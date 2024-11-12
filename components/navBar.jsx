@@ -16,10 +16,11 @@ export function Navbar({ alwaysShown }) {
   // Navigation items 
   // DA PRA IMPLEMENTAR SUBNAV
   const navigation = [
-    { name: 'Produtos', href: ';' },	
-    { name: 'Sobre', href: ';' },
-    { name: 'Clientes', href: ';' },
-    { name: 'Contato', href: ';' },
+    { name: 'O que fazemos', href: '/#AboutSection' },
+    { name: 'Quem somos', href: '/mvv' },
+    { name: 'Produtos', href: '/#ProductsSection' },
+    { name: 'Clientes', href: '/#CustomersSection' },
+    { name: 'Contato', href: '/#Footer' },
   ];
 
   // Handle navigation for internal links
@@ -36,16 +37,18 @@ export function Navbar({ alwaysShown }) {
   }
 
   return (
-    <nav className={`w-full text-branco fixed top-0 duration-200 transition-all delay-100 z-50 ${((visible || alwaysShown) && !isOpen) || isOpen ? '-translate-y-0 bg-stone-900' : '-translate-y-40 bg-opacity-0'} ${(isNavbarAtTop && !alwaysShown) && !isOpen ? 'bg-opacity-0' : 'bg-opacity-100'}`}>
+    <nav className={`w-full text-branco fixed top-0 duration-200 transition-all delay-100 z-50 ${((visible || alwaysShown) && !isOpen) || isOpen ? '-translate-y-0 bg-pink-950' : '-translate-y-40 bg-opacity-0 '} ${(isNavbarAtTop && !alwaysShown) && !isOpen ? 'bg-opacity-0' : 'bg-opacity-100 bg-stone-900'}`}>
       <div className="px-4 py-4 pr-4 mx-auto lg:px-8">
         <div className="relative flex items-center justify-between">
           {/* Logo Section */}
-          <div className="flex items-center flex-1">
+          <div className="flex items-center w-full">
             <Link href="/" className="flex items-center justify-center gap-4">
-              <img
-                src="/logo-branca.png"
+              <Image
+                width={200}
+                height={200}
+                src="/hisalogo.png"
                 alt="Logo oab para todos"
-                className="w-auto h-14 max-md:h-10"
+                className="w-auto h-16 max-md:h-12"
               />
             </Link>
           </div>
@@ -87,15 +90,15 @@ export function Navbar({ alwaysShown }) {
           <div className="hidden lg:block">
             <ul className="flex space-x-4 items-center">
               {navigation.map((item) => (
-                <li key={item.name} className="relative group">
-                  <Link href={item.href} passHref>
-                    <p className=" hover:text-gray-300">{item.name}</p>
+                <li key={item.name} className='group relative'>
+                  <Link href={item.href}  >
+                    <p className=" text-nowrap group-hover:text-rosa transition-all duration-200">{item.name}</p>
                   </Link>
                 </li>
               ))}
-              <li className="relative group">
+              {/* <li className="relative group">
                 <ThemeSwitch />
-              </li>
+              </li> */}
             </ul>
 
           </div>
@@ -107,11 +110,11 @@ export function Navbar({ alwaysShown }) {
         <div className="lg:hidden">
           <ul className="px-2 pt-2 pb-3 space-y-1">
             {navigation.map((item) => (
-              <li key={item.name}>
+              <li key={item.name} >
                 <Link href={item.href} passHref>
                   <p
                     onClick={() => setIsOpen(false)}
-                    className="block w-full px-3 py-2 text-left hover:bg-gray-700 hover:"
+                    className="block w-full px-3 py-2 text-left hover:bg-default-800 rounded-lg hover:text-rosa transition-all duration-100 hover:font-semibold"
                   >
                     {item.name}
                   </p>
