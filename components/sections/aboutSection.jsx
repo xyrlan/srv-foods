@@ -11,7 +11,7 @@ const AboutSection = () => {
   return (
     <div
     id='AboutSection'
-      className="flex max-md:flex-col py-14 md:py-32 px-4 items-center  md:h-auto dark:bg-stone-900 bg-white relative w-full overflow-hidden"
+      className="flex max-md:flex-col py-14 md:py-32 px-4 items-center justify-center md:h-auto dark:bg-stone-900 bg-white relative w-full overflow-hidden md:gap-20"
     >
       <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] z-10 border border-rosa rounded-full border-opacity-20 ' />
       <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] z-10 border border-rosa rounded-full border-opacity-20' />
@@ -29,7 +29,7 @@ const AboutSection = () => {
           duration: 1,
           delay: 0.5,
         }}
-        className="w-full z-10 ">
+        className="z-10 ">
         <h2
           className="text-center text-4xl md:text-8xl font-bold text-black dark:text-rosa leading-tight">
           <span className='font-thin '>O que</span><br />fazemos
