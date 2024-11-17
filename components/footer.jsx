@@ -38,7 +38,7 @@ const Footer = () => {
                 <Image
                   width={200}
                   height={200}
-                  src="/hisalogo.png"
+                  src="/ativo2.svg"
                   alt="Logo oab para todos"
                   className="w-auto h-16 max-md:h-12"
                 />

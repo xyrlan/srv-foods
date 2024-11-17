@@ -13,7 +13,7 @@ export default async function Home() {
       <HeroSection />
       <AboutSection />
       <ProductsSection products={products} />
-      <CustomersSection />
+      <CustomersSection clients={clients} />
     </>
   );
 }

@@ -7,7 +7,7 @@ import React from 'react'
 
 const QuemSomosSection = () => {
   return (
-    <section id='QuemSomosSection' className="flex max-lg:flex-col justify-center pt-24 md:p-12 px-6 sm:p-24 bg-[#292824] relative overflow-hidden">
+    <section id='QuemSomosSection' className="flex max-lg:flex-col justify-center pt-24 pb-6 md:p-24 px-6  bg-[#292824] relative overflow-hidden">
       <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] z-10 border border-rosa rounded-full border-opacity-20' />
       <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] z-10 border border-rosa rounded-full border-opacity-20' />
       <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] z-10 border border-rosa rounded-full border-opacity-20 ' />

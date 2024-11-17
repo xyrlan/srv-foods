@@ -7,7 +7,6 @@ const MVVPage = () => {
     <div>
       <QuemSomosSection />
       <MVVSection />
-
     </div>
   )
 }

@@ -399,7 +399,7 @@ export function GlobeDemo() {
     (
       <div
         className="max-w-7xl mx-auto w-full relative overflow-hidden h-[15rem] md:h-[40rem] px-4 ">
-        <Image src="/hisalogo.png" alt="About" width={1000} height={1000} className='object-contain absolute -bottom-0 right-1/2 translate-x-1/2 h-20 md:hidden z-50' />
+        <Image src="/ativo2.svg" alt="About" width={1000} height={1000} className='object-contain absolute -bottom-0 right-1/2 translate-x-1/2 h-16 md:hidden z-50' />
         
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-stone-900 to-white z-40" />
 

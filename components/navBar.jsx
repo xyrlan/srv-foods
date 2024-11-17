@@ -46,9 +46,9 @@ export function Navbar({ alwaysShown }) {
               <Image
                 width={200}
                 height={200}
-                src="/hisalogo.png"
+                src="/ativo3.svg"
                 alt="Logo oab para todos"
-                className="w-auto h-16 max-md:h-12"
+                className="w-auto h-12 max-md:h-8"
               />
             </Link>
           </div>
