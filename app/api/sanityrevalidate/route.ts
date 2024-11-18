@@ -1,18 +1,15 @@
 import { revalidateTag } from "next/cache";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { parseBody } from "next-sanity/webhook";
-import { webhookSecret } from "@/sanity/env";
 
-export async function handler(req) {
-  // Verifica se o método da requisição é POST
-  if (req.method !== "POST") {
-    return NextResponse.json({ error: "Method Not Allowed" }, { status: 405 });
-  }
+
+export async function POST(req: NextRequest) {
+
   try {
     // Parseia o corpo da requisição e valida a assinatura
     const { body, isValidSignature } = await parseBody(
       req,
-      webhookSecret
+      process.env.NEXT_PUBLIC_SANITY_TOKEN
     );
 
     // Verifica se a assinatura é válida
