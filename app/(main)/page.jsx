@@ -8,6 +8,7 @@ export default async function Home() {
   const products = await fetchProducts();
   const clients = await fetchClients();
   // const catalogo = await fetchCatalogo();
+  
   return (
     <main>
       <HeroSection />
