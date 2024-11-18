@@ -17,10 +17,10 @@ export async function POST(req) {
     // Revalida a tag usando o tipo de documento
     revalidateTag(body._type);
 
-    // Se o tipo for 'produto' e houver um slug, revalida a tag do produto também
-    if (body._type === "produto" && body.slug) {
-      revalidateTag(`${body.slug}`);
-    }
+    // // Se o tipo for 'produto' e houver um slug, revalida a tag do produto também
+    // if (body._type === "produto" && body.slug) {
+    //   revalidateTag(`${body.slug}`);
+    // }
 
     return NextResponse.json({
       status: 200,
