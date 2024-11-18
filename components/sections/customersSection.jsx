@@ -9,7 +9,7 @@ const CustomersSection = ({ clients }) => {
   return (
     <div
       id='CustomersSection'
-      className=' w-full py-20 md:py-32'>
+      className=' w-full py-20 md:py-32 container px-4'>
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 20 }}
@@ -25,8 +25,8 @@ const CustomersSection = ({ clients }) => {
       <div className='flex justify-start md:gap-x-8 max-md:gap-x-2 flex-wrap p-3  '>
         {clients.map((client, index) => (
           <div key={client._id}>
-            <Link href={client.site || "#"} className='flex flex-col items-center justify-center gap-4 p-2 rounded-lg border border-solid border-default-500 '>
-              <Image src={urlFor(client.foto).url()} alt={client.nome} width={200} height={200} className='object-contain select-none h-[20rem] overflow-hidden' />
+            <Link href={client.site || "#"} className='flex flex-col items-center justify-center gap-4 p-2 rounded-lg  '>
+              <Image src={urlFor(client.foto).url()} alt={client.nome} width={200} height={200} className='object-contain select-none h-[13rem] overflow-hidden' />
             </Link>
           </div>
         ))}
