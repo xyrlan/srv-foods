@@ -7,7 +7,7 @@ const LinksComponent = () => {
     <ul className="mt-7 flex justify-center gap-6 md:gap-8">
     <li>
       <Link
-        href="https://wa.me/"
+        href="https://wa.me/5567999180927"
         rel="noreferrer"
         target="_blank"
         className="text-default-600 transition hover:text-default-600/75 "
@@ -25,7 +25,7 @@ const LinksComponent = () => {
 
     <li>
       <Link
-        href="https://www.instagram.com/"
+        href="https://www.instagram.com/srv.distribuidora?igsh=N3c1ZjNpcnc0N2ly"
         rel="noreferrer"
         target="_blank"
         className="text-default-600 transition hover:text-default-600/75"

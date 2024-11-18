@@ -171,7 +171,7 @@ const Footer = () => {
 
               <address className="-mt-0.5 flex-1 not-italic max-w-xs">
               R. Marquês de Leão, 295 - Parque dos Novos Estados
-              Campo Grande - MS, 79034-520
+              - Campo Grande - MS, 79034-520
               </address>
             </li>
           </ul>
