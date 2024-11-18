@@ -4,24 +4,26 @@ import { parseBody } from "next-sanity/webhook";
 
 export async function POST(req) {
   try {
-    const { body, isValidSignature } = await parseBody(req, process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET);
+    // Parseia o corpo da requisição e valida a assinatura
+    const { body, isValidSignature } = await parseBody(
+      req,
+      process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET
+    );
 
+    // Verifica se a assinatura é válida
     if (!isValidSignature) {
-      return new Response("Invalid Signature", { status: 401 });
+      return NextResponse.json({ error: "Invalid Signature" }, { status: 401 });
     }
 
+    // Verifica se o tipo do documento foi enviado no corpo
     if (!body?._type) {
-      return new Response("Bad Request", { status: 400 });
+      return NextResponse.json({ error: "Bad Request: Missing _type" }, { status: 400 });
     }
 
-    // Revalida a tag usando o tipo de documento
+    // Revalida a tag correspondente ao tipo de documento
     revalidateTag(body._type);
 
-    // // Se o tipo for 'produto' e houver um slug, revalida a tag do produto também
-    // if (body._type === "produto" && body.slug) {
-    //   revalidateTag(`${body.slug}`);
-    // }
-
+    // Retorna uma resposta de sucesso
     return NextResponse.json({
       status: 200,
       revalidated: true,
@@ -29,6 +31,8 @@ export async function POST(req) {
       body,
     });
   } catch (error) {
-    return new Response(error.message, { status: 500 });
+    // Captura e retorna erros inesperados
+    console.error("Webhook processing error:", error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
