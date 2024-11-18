@@ -1,5 +1,7 @@
 import { client } from "./client";
 
+export const revalidate = 0;
+
 export const fetchProducts = async () => {
   const query = `
   *[_type == 'produto'] {
