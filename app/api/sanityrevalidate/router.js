@@ -1,13 +1,14 @@
 import { revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { parseBody } from "next-sanity/webhook";
+import { webhookSecret } from "@/sanity/env";
 
 export async function POST(req) {
   try {
     // Parseia o corpo da requisição e valida a assinatura
     const { body, isValidSignature } = await parseBody(
       req,
-      process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET
+      webhookSecret
     );
 
     // Verifica se a assinatura é válida
