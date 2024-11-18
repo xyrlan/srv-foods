@@ -36,7 +36,7 @@ const AboutSection = () => {
         </h2>
         <p
           className="text-balance text-center text-base md:text-lg font-normal text-default-600 max-w-xl mt-4  mx-auto">
-        Estabelecemos nossa rotas comerciais e logisticas, para que tenhamos sempre um ótimo rendimento e positivação nas vendas e entregas. Nossa logística é própria e nova, para garantir que entregaremos semrpe o melhor produto e pequenos intervalos para que nao haja rupturas nos pontos de vendas e para garantir que os clientes sempre comprem a mesma qualidade que o produto sai de sua unidade Fabril.
+        Estabelecemos nossa rotas comerciais e logisticas, para que tenhamos sempre um ótimo rendimento e positivação nas vendas e entregas. Nossa logística é própria e nova, para garantir que entregaremos sempre o melhor produto e pequenos intervalos para que não haja rupturas nos pontos de vendas e para garantir que os clientes sempre comprem a mesma qualidade que o produto sai de sua unidade Fabril.
         </p>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
