@@ -7,7 +7,7 @@ import { fetchCatalogo, fetchClients, fetchProducts } from "@/sanity/lib/queries
 export default async function Home() {
   const products = await fetchProducts();
   const clients = await fetchClients();
-  const catalogo = await fetchCatalogo();
+  // const catalogo = await fetchCatalogo();
   return (
     <>
       <HeroSection />
