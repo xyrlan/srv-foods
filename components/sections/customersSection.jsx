@@ -25,7 +25,7 @@ const CustomersSection = ({ clients }) => {
       <div className='flex justify-start md:gap-x-8 max-md:gap-x-2 flex-wrap p-3  '>
         {clients.map((client, index) => (
           <div key={client._id}>
-            <Link href={client.site || "#"} className='flex flex-col items-center justify-center gap-4 p-2 rounded-lg  '>
+            <Link href={client.site || "#"} target='_blank' className='flex flex-col items-center justify-center gap-4 p-2 rounded-lg  '>
               <Image src={urlFor(client.foto).url()} alt={client.nome} width={200} height={200} className='object-contain select-none h-[13rem] overflow-hidden' />
             </Link>
           </div>
