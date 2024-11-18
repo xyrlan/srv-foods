@@ -36,3 +36,5 @@ export async function POST(req) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
+
+export const GET = () => NextResponse.json({ error: "Method Not Allowed" }, { status: 405 });
