@@ -19,9 +19,9 @@ export const fetchClients = async () => {
     ...
   }
   `;
-  const clients = await client.fetch(query);
+  const customers = await client.fetch(query);
 
-  return clients;
+  return customers;
 };
 
 export const fetchCatalogo = async () => {

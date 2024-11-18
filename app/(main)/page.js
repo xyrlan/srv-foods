@@ -9,11 +9,11 @@ export default async function Home() {
   const clients = await fetchClients();
   // const catalogo = await fetchCatalogo();
   return (
-    <>
+    <main>
       <HeroSection />
       <AboutSection />
       <ProductsSection products={products} />
       <CustomersSection clients={clients} />
-    </>
+    </main>
   );
 }
