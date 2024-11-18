@@ -25,21 +25,6 @@ const ProductsSection = ( { products } ) => {
         </p>
       </motion.div>
 
-      {/* <div className='flex items-center justify-center gap-10'>
-        <div>
-          <h3
-            className="text-center text-lg md:text-2xl font-bold text-black dark:text-white"
-          >
-            Franuí
-          </h3>
-          <p
-            className="text-center text-sm md:text-base font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-            Framboesas frescas banhadas em dois chocolates Receita da Patagônia ✨Sem glúten, produto que esta super em alta no Brasil.
-          </p>
-        </div>
-        <Image src="/franu.png" alt="Franui" width={500} height={500} className='object-contain ' />
-      </div> */}
-
       <ProductsCarousel products={products} />
 
     </div>

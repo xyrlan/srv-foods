@@ -2,17 +2,18 @@ import { client } from "./client";
 
 export const revalidate = 0;
 
-export const fetchProducts = async () => {
-  const query = `
-  *[_type == 'produto'] {
-    _type,
-    ...
-  }
-  `;
-  const products = await client.fetch(query);
 
+export const fetchProducts = cache(async () => {
+  const query = `
+    *[_type == 'produto'] {
+      _type,
+      ...
+    }
+  `;
+
+  const products = await client.fetch(query, {}, { next: { tags: ["produto"] } });
   return products;
-};
+});
 
 export const fetchClients = async () => {
   const query = `
@@ -21,7 +22,7 @@ export const fetchClients = async () => {
     ...
   }
   `;
-  const customers = await client.fetch(query);
+  const customers = await client.fetch(query, {}, { next: { tags: ["cliente"] } });
 
   return customers;
 };
@@ -33,7 +34,7 @@ export const fetchCatalogo = async () => {
     ...
   }
   `;
-  const catalogo = await client.fetch(query);
+  const catalogo = await client.fetch(query, {}, { next: { tags: ["catalogoProdutos"] } });
 
   return catalogo;
 };

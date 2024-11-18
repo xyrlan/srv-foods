@@ -80,7 +80,7 @@ export default function ProductsCarousel({ products }) {
             <div className='relative'>
               <div className=' rounded-[50%] shadow-sm
                shadow-rosa absolute -bottom-0 left-1/2 -translate-x-1/2 max-lg:w-[300px] max-md:w-[250px] w-[374px] h-[150px] max-sm:w-[200px] max-md:bottom-5 max-sm:h-[100px]' />
-              <Image src={urlFor(selectedTab.foto).url()} alt={selectedTab.nome} width={500} height={500} className='object-contain select-none h-[20rem] overflow-hidden' />
+              <Image src={urlFor(selectedTab.foto).url()} alt={selectedTab.nome} width={500} height={320} className='object-contain select-none h-[20rem] overflow-hidden' />
             </div>
           </motion.div>
         </AnimatePresence>
