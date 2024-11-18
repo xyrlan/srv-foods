@@ -1,9 +1,9 @@
 import { revalidateTag } from "next/cache";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { parseBody } from "next-sanity/webhook";
 
 
-export async function POST(req: NextRequest) {
+export async function POST(req) {
 
   try {
     // Parseia o corpo da requisição e valida a assinatura
