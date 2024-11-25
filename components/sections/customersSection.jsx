@@ -9,7 +9,7 @@ const CustomersSection = ({ clients }) => {
   return (
     <div
       id='CustomersSection'
-      className=' w-full py-20 md:py-32 container px-4'>
+      className=' w-full py-20 md:py-32 container px-4 max-w-5xl'>
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 20 }}
@@ -17,17 +17,23 @@ const CustomersSection = ({ clients }) => {
         className="div"
       >
         <h2
-          className="text-center text-xl md:text-4xl font-bold text-black dark:text-rosa">
+          className="text-center text-xl md:text-4xl font-bold text-black dark:text-rosa mb-5">
           <span className='font-thin'>Alguns dos nossos</span> clientes
         </h2>
 
       </motion.div>
-      <div className='flex justify-start md:gap-x-8 max-md:gap-x-2 flex-wrap p-3  '>
+      <div className='flex justify-center md:gap-8 max-md:gap-2 flex-wrap p-3 '>
         {clients.map((client, index) => (
           <div key={client._id}>
-            <Link href={client.site || "#"} target='_blank' className='flex flex-col items-center justify-center gap-4 p-2 rounded-lg  '>
-              <Image src={urlFor(client.foto).url()} alt={client.nome} width={200} height={200} className='object-contain select-none h-[13rem] overflow-hidden' />
-            </Link>
+            { client.site ?
+                <Link href={client.site || "#"} target='_blank' className=' rounded-lg  '>
+                  <Image src={urlFor(client.foto).url()} alt={client.nome} width={200} height={200} className='object-contain select-none w-auto h-[4rem] md:h-[8rem] overflow-hidden' />
+                </Link>
+                :
+                <div>
+                  <Image src={urlFor(client.foto).url()} alt={client.nome} width={200} height={200} className='object-contain select-none w-auto h-[4rem] md:h-[8rem] overflow-hidden' />
+                </div>
+            }
           </div>
         ))}
       </div>

@@ -7,7 +7,7 @@ const ProductsSection = ( { products } ) => {
   return (
     <div 
     id='ProductsSection'
-    className=' w-full py-20 md:py-32'>
+    className=' w-full py-20 md:py-32 px-2'>
 
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const ProductsSection = ( { products } ) => {
           <span className='font-thin'>Alguns dos nossos</span> produtos
         </h2>
         <p
-          className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-xl mt-2 mx-auto">
+          className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-xl mt-2 mx-auto ">
           Importamos produtos que estão em alta e que possuem alto valor de mercado. Vendemos e entregamos o MELHOR!
         </p>
       </motion.div>

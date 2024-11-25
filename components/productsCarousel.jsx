@@ -27,7 +27,7 @@ export default function ProductsCarousel({ products }) {
 
   return (
     <div className='md:container mx-auto z-10 mt-10'>
-      <nav className="rounded-t z-10 dark:bg-stone-900 bg-white px-4">
+      <nav className="rounded-t z-10 dark:bg-stone-900 bg-white px-4 mb-2">
         <ul className="flex w-full overflow-scroll scrollbar-hide">
           {products.map((item, index) => (
             <li
@@ -35,7 +35,7 @@ export default function ProductsCarousel({ products }) {
               className={`flex-1 flex select-none justify-center items-center gap-4 p-2.5 relative cursor-pointer font-semibold text-lg border ${index === selectedIndex ? 'text-rosa ' : 'text-default-500 hover:text-default-700'}`}
               onClick={() => setSelectedIndex(index)}
             >
-              <p className=''>{item.nome}</p>
+              <p className='text-nowrap'>{item.nome}</p>
               {index === selectedIndex ? (
                 <motion.div className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-rosa" layoutId="underline" />
               ) : null}
@@ -69,7 +69,7 @@ export default function ProductsCarousel({ products }) {
            
             <div className='flex flex-col items-center justify-center gap-6 '>
               <h3 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white tracking-wider max-md:mt-4">{selectedTab.nome}</h3>
-              <p className='w-full max-w-xl text-center md:text-lg font-medium self-center md:mt-4 md:px-4 text-default-700'>{selectedTab.descricao}</p>
+              <p className='w-full max-w-xl text-center font-medium self-center md:mt-4 md:px-4 text-default-700'>{selectedTab.descricao}</p>
               <div className='flex justify-center my-5'>
                 <Button  color='primary' variant='shadow' size='lg'>
                   <ChatBubbleIcon className='w-5 h-5' />
