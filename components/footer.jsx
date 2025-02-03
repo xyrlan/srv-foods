@@ -39,7 +39,7 @@ const Footer = () => {
                   width={200}
                   height={200}
                   src="/ativo2.svg"
-                  alt="Logo oab para todos"
+                  alt="Hisa Distribuidora"
                   className="w-auto h-16 max-md:h-12"
                 />
               </Link>

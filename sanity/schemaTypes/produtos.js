@@ -12,6 +12,13 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "marca",
+      title: "Marca",
+      type: "string",
+      validation: (rule) => rule.required(),
+      description: "Obs: Colocar o nome idêntico aos outros produtos da marca",
+    }),
+    defineField({
       name: "descricao",
       title: "Descrição",
       type: "string",

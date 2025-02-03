@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Hisa Distribuidora",
+  title: "Hisa Distribuidora - Distribuidora Exclusiva do Franuí e Bacio di Latte",
   description: "Sua conexão global para importação, exportação e distribuição de diversos produtos. Com a SRV, você tem acesso a qualidade, confiabilidade e excelência em serviços logísticos.",
   applicationName: "Hisa Distribuidora",
   alternates: {
