@@ -49,7 +49,7 @@ const LinksComponent = () => {
         className="text-default-600 transition hover:text-default-600/75"
       >
         <span className="sr-only">Linktree</span>
-        <Image src={'/lintree.png'} width={42} height={42} alt='linktree-logo' className=' duration-300 hover:saturate-150 transition-all -translate-x-2 -translate-y-[1px]' />
+        <img src={'/lintree.png'} width={42} height={42} alt='linktree-logo' className=' duration-300 hover:saturate-150 transition-all -translate-x-2 -translate-y-[1px]' />
       </Link>
     </li>
 
@@ -61,7 +61,7 @@ const LinksComponent = () => {
         className="text-default-600 transition hover:text-default-600/75"
       >
         <span className="sr-only">Linktree</span>
-        <Image src={'/lattes.png'} width={32} height={32} alt='linktree-logo' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all -translate-x-4 -translate-y-[1px]' />
+        <img src={'/lattes.png'} width={32} height={32} alt='linktree-logo' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all -translate-x-4 -translate-y-[1px]' />
       </Link>
     </li> */}
 

@@ -102,7 +102,7 @@ export default function ProductsCarousel({ products }) {
             </div>
             <div className='relative flex items-center justify-center z-20'>
               <div className='absolute bottom-0 left-1/2 -translate-x-1/2 rounded-[50%] shadow-sm shadow-rosa w-[374px] h-[150px] max-lg:w-[300px] max-md:w-[250px] max-sm:w-[200px] max-md:bottom-5 max-sm:h-[100px] z-[-1]' />
-              <Image
+              <img
                 src={urlFor(selectedTab.foto).url()}
                 alt={selectedTab.nome}
                 width={500}

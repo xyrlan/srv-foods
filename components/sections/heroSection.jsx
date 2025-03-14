@@ -29,7 +29,7 @@ const HeroSection = () => {
           delay: 2,
         }}
         className="w-full flex flex-col items-center">
-        <Image src="/ativo2.svg" alt="About" width={1000} height={1000} className='object-contain max-lg:overflow-hidden h-20 mb-10 max-md:hidden' />
+        <img src="/ativo2.svg" alt="About" width={1000} height={1000} className='object-contain max-lg:overflow-hidden h-20 mb-10 max-md:hidden' />
         <h2
           className="text-center text-2xl md:text-4xl font-bold text-black dark:text-rosa max-w-xl mx-auto my-2">
           Distribuição inteligente  <span className='font-thin'>para vários estados do Brasil.</span>

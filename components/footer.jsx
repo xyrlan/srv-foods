@@ -35,7 +35,7 @@ const Footer = () => {
           <div>
             <div className="flex justify-center lg:justify-start ">
               <Link href="/" className="flex items-center justify-center gap-4">
-                <Image
+                <img
                   width={200}
                   height={200}
                   src="/ativo2.svg"

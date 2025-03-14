@@ -27,11 +27,11 @@ const CustomersSection = ({ clients }) => {
           <div key={client._id}>
             { client.site ?
                 <Link href={client.site || "#"} target='_blank' className=' rounded-lg  '>
-                  <Image src={client.foto ? urlFor(client.foto).url() : ''} alt={client.nome} width={200} height={200} className='object-contain select-none w-auto h-[4rem] md:h-[8rem] overflow-hidden rounded-lg' />
+                  <img src={client.foto ? urlFor(client.foto).url() : ''} alt={client.nome} width={200} height={200} className='object-contain select-none w-auto h-[4rem] md:h-[8rem] overflow-hidden rounded-lg' />
                 </Link>
                 :
                 <div>
-                  <Image src={client.foto ? urlFor(client.foto).url() : ''} alt={client.nome} width={200} height={200} className='object-contain select-none w-auto h-[4rem] md:h-[8rem] overflow-hidden rounded-lg' />
+                  <img src={client.foto ? urlFor(client.foto).url() : ''} alt={client.nome} width={200} height={200} className='object-contain select-none w-auto h-[4rem] md:h-[8rem] overflow-hidden rounded-lg' />
                 </div>
             }
           </div>
