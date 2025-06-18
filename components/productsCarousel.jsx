@@ -88,7 +88,7 @@ export default function ProductsCarousel({ products }) {
               <p className='w-full max-w-xl text-center font-medium self-center md:mt-4 md:px-4 text-default-700'>{selectedTab.descricao}</p>
               <div className='flex justify-center my-5'>
                 <Link
-                  href="https://wa.me/5567999180927"
+                  href="https://wa.me/5567999599979"
                   rel="noreferrer"
                   target="_blank"
                   className="text-default-600 transition hover:text-default-600/75 "

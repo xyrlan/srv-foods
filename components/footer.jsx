@@ -48,7 +48,7 @@ const Footer = () => {
             <p
               className="mx-auto mt-6 max-w-md text-center leading-relaxed lg:text-left dark:text-default-600"
             >
-              Distribuição inteligente  <span className='font-thin'>para vários estados do Brasil.</span>
+              Distribuição inteligente  <span className='font-thin'>para Mato Grosso e Mato Grosso do Sul</span>
             </p>
             <div className='md:w-fit'>
               <LinksComponent />
